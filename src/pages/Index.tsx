@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Shield, Check, Star, Gift, ChevronDown, Heart, Sparkles, Award, Zap, Crown } from "lucide-react";
 import CTAButton from "@/components/CTAButton";
-import CountdownTimer from "@/components/CountdownTimer";
+import CountdownTimer, { OfferCountdown } from "@/components/CountdownTimer";
 import SocialProofPopup from "@/components/SocialProofPopup";
 import SocialProofSection from "@/components/SocialProofSection";
 
@@ -35,10 +35,14 @@ const stagger = {
 const Hero = () => (
   <section className="section-padding bg-secondary">
     <div className="container-narrow text-center">
-      <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-        className="text-sm uppercase tracking-widest text-muted-foreground mb-4 font-body">
-        Para mujeres que quieren crear algo propio desde casa
-      </motion.p>
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+        className="inline-flex items-center gap-2 mb-5 px-4 py-2 rounded-full bg-gradient-to-r from-rosa-dark/90 to-gold shadow-lg">
+        <Sparkles className="w-4 h-4 text-background" />
+        <p className="text-xs md:text-sm uppercase tracking-wider text-background font-body font-bold">
+          Para mujeres que quieren crear algo propio desde casa
+        </p>
+        <Sparkles className="w-4 h-4 text-background" />
+      </motion.div>
 
       <motion.h1 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
         className="text-3xl md:text-5xl font-bold leading-tight mb-6 font-heading">
@@ -296,6 +300,8 @@ const Oferta = () => (
       <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="section-headline">
         🎉 Empieza hoy con un precio especial
       </motion.h2>
+
+      <OfferCountdown />
 
       <motion.div
         initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
