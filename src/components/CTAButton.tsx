@@ -10,9 +10,9 @@ const CTAButton = ({
   microcopy = "Acceso inmediato + pago seguro"
 }: CTAButtonProps) => (
   <div className="flex flex-col items-center w-full">
-    <a href="https://pay.hotmart.com/Y91660116H" target="_blank" rel="noopener noreferrer" className="cta-button">
+    <button type="button" className="cta-button">
       {text}
-    </a>
+    </button>
     <p className="microcopy">
       <Lock className="w-4 h-4" />
       {microcopy}
