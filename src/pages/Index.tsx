@@ -261,14 +261,14 @@ const Creadora = () => (
   <section className="section-padding bg-secondary">
     <div className="container-narrow">
       <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="section-headline text-center">
-        Conoce a Isabella Toscano
+        Conoce a Isabella Tascón
       </motion.h2>
       <div className="flex flex-col md:flex-row items-center gap-8">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex-shrink-0">
-          <img src={creatorImg} alt="Isabella Toscano, creadora del curso" loading="lazy" width={800} height={800} className="rounded-2xl w-64 h-64 object-cover shadow-lg" />
+          <img src={creatorImg} alt="Isabella Tascón, creadora del curso" loading="lazy" width={800} height={800} className="rounded-2xl w-64 h-64 object-cover shadow-lg" />
         </motion.div>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-muted-foreground font-body leading-relaxed space-y-4">
-          <p>Soy Isabella Toscano, tengo 22 años y desde hace 5 años me dedico a crear bolsos con cuentas. Durante este tiempo, esta pasión se ha convertido en una parte muy importante de mi vida, permitiéndome aprender, perfeccionar técnicas y desarrollar diseños llenos de detalle, estilo y dedicación.</p>
+          <p>Soy Isabella Tascón, tengo 22 años y desde hace 5 años me dedico a crear bolsos con cuentas. Durante este tiempo, esta pasión se ha convertido en una parte muy importante de mi vida, permitiéndome aprender, perfeccionar técnicas y desarrollar diseños llenos de detalle, estilo y dedicación.</p>
           <p>Hoy quiero compartir contigo todo lo que he aprendido de una manera sencilla, cercana y práctica, para que tú también puedas aprender a crear bolsos hermosos, incluso si estás empezando desde cero. Creé este curso pensando en mujeres que desean desarrollar una nueva habilidad, disfrutar del proceso creativo y sentirse capaces de lograrlo con sus propias manos.</p>
           <p>Mi mayor propósito es acompañarte paso a paso, transmitirte confianza y demostrarte que, con la guía correcta, tú también puedes crear piezas únicas y especiales.</p>
         </motion.div>
