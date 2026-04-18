@@ -301,6 +301,8 @@ const Oferta = () => (
         🎉 Empieza hoy con un precio especial
       </motion.h2>
 
+      <OfferCountdown />
+
       <motion.div
         initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
         className="max-w-md mx-auto relative"
