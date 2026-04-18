@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Shield, Check, Star, Gift, ChevronDown, Heart, Sparkles, Award, Zap, Crown } from "lucide-react";
 import CTAButton from "@/components/CTAButton";
-import CountdownTimer from "@/components/CountdownTimer";
+import CountdownTimer, { OfferCountdown } from "@/components/CountdownTimer";
 import SocialProofPopup from "@/components/SocialProofPopup";
 import SocialProofSection from "@/components/SocialProofSection";
 
