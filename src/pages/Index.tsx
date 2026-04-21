@@ -17,9 +17,16 @@ import galeria6 from "@/assets/galeria-6.webp";
 import galeriaNew1 from "@/assets/galeria-new-1.webp";
 import galeriaNew2 from "@/assets/galeria-new-2.png";
 import galeriaNew3 from "@/assets/galeria-new-3.webp";
-import bonosImg from "@/assets/bonos-modelo.webp";
+import bonoPlantillas from "@/assets/bono-plantillas.jpg";
+import bonoMantenimiento from "@/assets/bono-mantenimiento.jpg";
+import bonoReparacion from "@/assets/bono-reparacion.jpg";
+import bonoMallaPlastica from "@/assets/bono-malla-plastica.jpg";
+import bonoFotografia from "@/assets/bono-fotografia.jpg";
+import bonoRedes from "@/assets/bono-redes.jpg";
+import bonoEmpaque from "@/assets/bono-empaque.jpg";
+import bonoTelegram from "@/assets/bono-telegram.jpg";
 import beneficiosImg from "@/assets/beneficios-modelo.webp";
-import creatorImg from "@/assets/creator-isabella.webp";
+import creatorImg from "@/assets/creator-isabella-new.webp";
 import ctaFinalImg from "@/assets/cta-final-modelo.webp";
 
 const fadeUp = {
