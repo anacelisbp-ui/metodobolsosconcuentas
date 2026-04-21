@@ -26,7 +26,7 @@ import bonoRedes from "@/assets/bono-redes.jpg";
 import bonoEmpaque from "@/assets/bono-empaque.jpg";
 import bonoTelegram from "@/assets/bono-telegram.jpg";
 import beneficiosImg from "@/assets/beneficios-modelo.webp";
-import creatorImg from "@/assets/creator-isabella-new.webp";
+import creatorImg from "@/assets/creator-isabella-clean.webp";
 import ctaFinalImg from "@/assets/cta-final-modelo.webp";
 
 const fadeUp = {
