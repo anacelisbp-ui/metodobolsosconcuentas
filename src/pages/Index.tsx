@@ -279,7 +279,7 @@ const Creadora = () => (
       </motion.h2>
       <div className="flex flex-col md:flex-row items-center gap-8">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex-shrink-0">
-          <img src={creatorImg} alt="Isabella Tascón, creadora del curso" loading="lazy" width={800} height={800} className="rounded-2xl w-64 h-64 object-cover shadow-lg" />
+          <img src={creatorImg} alt="Isabella Tascón, creadora del curso" loading="lazy" width={800} height={1422} className="rounded-2xl w-64 h-auto object-contain shadow-lg bg-secondary" />
         </motion.div>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-muted-foreground font-body leading-relaxed space-y-4">
           <p>Soy Isabella Tascón, tengo 22 años y desde hace 5 años me dedico a crear bolsos con cuentas. Durante este tiempo, esta pasión se ha convertido en una parte muy importante de mi vida, permitiéndome aprender, perfeccionar técnicas y desarrollar diseños llenos de detalle, estilo y dedicación.</p>
