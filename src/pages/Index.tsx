@@ -17,9 +17,16 @@ import galeria6 from "@/assets/galeria-6.webp";
 import galeriaNew1 from "@/assets/galeria-new-1.webp";
 import galeriaNew2 from "@/assets/galeria-new-2.png";
 import galeriaNew3 from "@/assets/galeria-new-3.webp";
-import bonosImg from "@/assets/bonos-modelo.webp";
+import bonoPlantillas from "@/assets/bono-plantillas.jpg";
+import bonoMantenimiento from "@/assets/bono-mantenimiento.jpg";
+import bonoReparacion from "@/assets/bono-reparacion.jpg";
+import bonoMallaPlastica from "@/assets/bono-malla-plastica.jpg";
+import bonoFotografia from "@/assets/bono-fotografia.jpg";
+import bonoRedes from "@/assets/bono-redes.jpg";
+import bonoEmpaque from "@/assets/bono-empaque.jpg";
+import bonoTelegram from "@/assets/bono-telegram.jpg";
 import beneficiosImg from "@/assets/beneficios-modelo.webp";
-import creatorImg from "@/assets/creator-isabella.webp";
+import creatorImg from "@/assets/creator-isabella-new.webp";
 import ctaFinalImg from "@/assets/cta-final-modelo.webp";
 
 const fadeUp = {
@@ -200,13 +207,14 @@ const PruebaVisual = () => (
 
 /* ─── 7. BONOS ─── */
 const bonos = [
-  "Plantillas y diagramas descargables",
-  "Guía de mantenimiento",
-  "Guía de reparación",
-  "Guía Canva para crear tu marca",
-  "Guía de fotografía de producto",
-  "Guía de redes sociales",
-  "Guía de empaque profesional",
+  { text: "Plantillas y diagramas descargables", img: bonoPlantillas },
+  { text: "Guía de mantenimiento", img: bonoMantenimiento },
+  { text: "Guía de reparación", img: bonoReparacion },
+  { text: "Guía para aprender a hacer bolsos con malla plástica (Plastic Canvas)", img: bonoMallaPlastica },
+  { text: "Guía de fotografía de producto", img: bonoFotografia },
+  { text: "Guía de redes sociales", img: bonoRedes },
+  { text: "Guía de empaque profesional", img: bonoEmpaque },
+  { text: "Grupo privado de Telegram con la maestra", img: bonoTelegram },
 ];
 
 const Bonos = () => (
@@ -216,18 +224,20 @@ const Bonos = () => (
         Recibes estos bonos incluidos
       </motion.h2>
 
-      <div className="grid md:grid-cols-2 gap-8 items-center">
-        <motion.ul initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="space-y-4">
-          {bonos.map((b) => (
-            <motion.li key={b} variants={fadeUp} className="flex items-center gap-3 font-body">
-              <Gift className="w-5 h-5 text-gold flex-shrink-0" /> {b}
-            </motion.li>
-          ))}
-        </motion.ul>
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        {bonos.map((b) => (
+          <motion.div key={b.text} variants={fadeUp} className="card-elegant flex flex-col">
+            <img src={b.img} alt={b.text} loading="lazy" width={512} height={512} className="rounded-xl w-full aspect-square object-cover mb-4" />
+            <div className="flex items-start gap-3 font-body">
+              <Gift className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
+              <span>{b.text}</span>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
 
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-          <img src={bonosImg} alt="Modelo con bolso de cuentas negro" loading="lazy" width={800} height={1200} className="rounded-2xl shadow-lg w-full max-w-sm mx-auto" />
-        </motion.div>
+      <div className="mt-10 text-center">
+        <CTAButton />
       </div>
     </div>
   </section>
