@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import { Shield, Check, Star, Gift, ChevronDown, Heart, Sparkles, Award, Zap, Crown } from "lucide-react";
+import { Shield, Check, Star, Gift, ChevronDown, Heart, Sparkles, Award, Zap, Crown, X } from "lucide-react";
 import CTAButton from "@/components/CTAButton";
 import CountdownTimer, { OfferCountdown } from "@/components/CountdownTimer";
 import SocialProofPopup from "@/components/SocialProofPopup";
 import SocialProofSection from "@/components/SocialProofSection";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 
 import heroImg from "@/assets/hero-creator.webp";
 import deseoImg from "@/assets/deseo-creator.webp";
@@ -25,7 +26,6 @@ import bonoFotografia from "@/assets/bono-fotografia.jpg";
 import bonoRedes from "@/assets/bono-redes.jpg";
 import bonoEmpaque from "@/assets/bono-empaque.jpg";
 import bonoTelegram from "@/assets/bono-telegram.jpg";
-import beneficiosImg from "@/assets/beneficios-modelo.webp";
 import creatorImg from "@/assets/creator-isabella-clean.webp";
 import ctaFinalImg from "@/assets/cta-final-modelo.webp";
 
@@ -35,7 +35,7 @@ const fadeUp = {
 };
 
 const stagger = {
-  visible: { transition: { staggerChildren: 0.15 } },
+  visible: { transition: { staggerChildren: 0.12 } },
 };
 
 /* ─── 1. HERO ─── */
@@ -53,24 +53,31 @@ const Hero = () => (
 
       <motion.h1 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
         className="text-3xl md:text-5xl font-bold leading-tight mb-6 font-heading">
-        Aprende a crear bolsos de cuentas hermosos desde cero… y conviértelos en una fuente de ingresos desde casa
+        Aprende a Crear Hermosos Bolsos con Cuentas Desde Cero Aunque Nunca Hayas Hecho Manualidades Antes
       </motion.h1>
 
       <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
         className="text-lg text-muted-foreground mb-8 font-body">
-        Curso online con +23 módulos donde aprenderás paso a paso (aunque empieces desde cero)
+        Descubre el método paso a paso que te enseña exactamente qué materiales usar, cómo ensamblar cada pieza y cómo lograr acabados hermosos sin sentirte perdida, confundida o gastando dinero en errores innecesarios.
       </motion.p>
 
       <motion.ul initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
-        className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-8 text-foreground font-body">
-        {["Sin experiencia previa", "Diseños modernos que sí se venden", "Aprende a tu ritmo", "Incluye guía para vender"].map((t) => (
-          <motion.li key={t} variants={fadeUp} className="flex items-center gap-2">
-            <Check className="w-5 h-5 text-verde-dark" /> {t}
+        className="grid sm:grid-cols-2 gap-x-6 gap-y-2 max-w-xl mx-auto mb-8 text-foreground font-body text-left">
+        {[
+          "No necesitas experiencia previa",
+          "Aprende desde casa y a tu ritmo",
+          "Diseños modernos y elegantes",
+          "Ideal para uso personal o venta",
+          "Acceso inmediato después de comprar",
+          "Soporte dentro de comunidad privada",
+        ].map((t) => (
+          <motion.li key={t} variants={fadeUp} className="flex items-start gap-2">
+            <Check className="w-5 h-5 text-verde-dark flex-shrink-0 mt-0.5" /> <span>{t}</span>
           </motion.li>
         ))}
       </motion.ul>
 
-      <CTAButton />
+      <CTAButton text="👉 QUIERO APRENDER AHORA" microcopy="🔒 Pago seguro · ⚡ Acceso inmediato · 🛡 Garantía de 7 días" />
 
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mt-10">
         <img src={heroImg} alt="Isabella Toscano sosteniendo un bolso de cuentas artesanal" width={800} height={1024} className="rounded-2xl mx-auto shadow-lg max-w-md w-full" />
@@ -84,15 +91,37 @@ const Problema = () => (
   <section className="section-padding">
     <div className="container-narrow">
       <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="section-headline text-center">
-        Sabes que podrías hacer algo bonito con tus manos… pero no sabes por dónde empezar
+        ¿Por qué la mayoría nunca logra crear bolsos realmente bonitos?
       </motion.h2>
-      <motion.ul initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="space-y-4 max-w-md mx-auto">
-        {["Te confunden los materiales", "No sabes qué técnica usar", "Tienes miedo de que no te quede bien", "No sabes cómo vender"].map((t) => (
-          <motion.li key={t} variants={fadeUp} className="flex items-start gap-3 text-muted-foreground text-lg font-body">
-            <span className="text-rosa-dark mt-1">✕</span> {t}
-          </motion.li>
+      <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center text-muted-foreground mb-10 font-body text-lg">
+        La realidad es que el problema no es la falta de talento.
+      </motion.p>
+
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        {[
+          "Aprenden con videos sueltos.",
+          "Compran materiales equivocados.",
+          "Nadie les explica el proceso completo.",
+          "Saltan pasos importantes.",
+          "Intentan copiar diseños sin entender la técnica.",
+          "Se frustran y abandonan.",
+        ].map((t) => (
+          <motion.div key={t} variants={fadeUp} className="card-elegant flex items-start gap-3 font-body">
+            <X className="w-5 h-5 text-rosa-dark flex-shrink-0 mt-0.5" />
+            <span>{t}</span>
+          </motion.div>
         ))}
-      </motion.ul>
+      </motion.div>
+
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mt-10 max-w-xl mx-auto space-y-2 font-body">
+        <p className="text-lg"><strong>El problema no eres tú.</strong></p>
+        <p className="text-muted-foreground">El problema es intentar aprender sin una guía clara paso a paso.</p>
+        <p className="text-muted-foreground">Y justamente eso es lo que resuelve este curso.</p>
+      </motion.div>
+
+      <div className="mt-8 text-center">
+        <CTAButton text="👉 QUIERO APRENDER EL MÉTODO" />
+      </div>
     </div>
   </section>
 );
@@ -107,15 +136,26 @@ const Deseo = () => (
         </motion.div>
         <div className="md:w-1/2 text-center md:text-left">
           <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="section-headline">
-            Imagina crear bolsos hermosos… y sentirte orgullosa de cada uno
+            Imagina lo que podrías lograr dentro de unas semanas...
           </motion.h2>
-          <motion.ul initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="space-y-4 max-w-md">
-            {["Crear piezas únicas con tus manos", "Recibir cumplidos por tus creaciones", "Generar ingresos desde casa", "Tener algo propio y sentirte realizada"].map((t) => (
-              <motion.li key={t} variants={fadeUp} className="flex items-center gap-3 text-lg font-body">
-                <Heart className="w-5 h-5 text-rosa-dark flex-shrink-0" /> {t}
+          <motion.ul initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="space-y-3 max-w-md">
+            {[
+              "Terminar tu primer bolso completamente hecho por ti.",
+              "Recibir elogios de amigas y familiares.",
+              "Crear regalos únicos y especiales.",
+              "Sentirte orgullosa de tus propias creaciones.",
+              "Tener una actividad creativa que realmente disfrutes.",
+              "Incluso comenzar a vender tus bolsos si así lo deseas.",
+            ].map((t) => (
+              <motion.li key={t} variants={fadeUp} className="flex items-start gap-3 text-base font-body">
+                <Sparkles className="w-5 h-5 text-rosa-dark flex-shrink-0 mt-0.5" /> <span>{t}</span>
               </motion.li>
             ))}
           </motion.ul>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mt-6 font-body space-y-1">
+            <p><strong>No necesitas ser experta.</strong></p>
+            <p className="text-muted-foreground">Solo necesitas seguir un método que te guíe paso a paso.</p>
+          </motion.div>
           <div className="mt-8">
             <CTAButton />
           </div>
@@ -248,14 +288,18 @@ const Beneficios = () => (
   <section className="section-padding">
     <div className="container-narrow text-center">
       <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="section-headline">
-        Lo que vas a lograr
+        Esto es lo que podrás conseguir cuando completes el curso
       </motion.h2>
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
         {[
-          { icon: Star, text: "Crear bolsos desde cero" },
-          { icon: Award, text: "Tener diseños vendibles" },
-          { icon: Sparkles, text: "Desarrollar una habilidad rentable" },
-          { icon: Heart, text: "Sentirte segura creando" },
+          { icon: Star, text: "Crear bolsos hermosos para ti." },
+          { icon: Gift, text: "Diseñar regalos únicos para familiares y amigas." },
+          { icon: Award, text: "Desarrollar una habilidad artesanal real." },
+          { icon: Sparkles, text: "Ahorrar dinero creando tus propios diseños." },
+          { icon: Heart, text: "Tener una actividad relajante y creativa." },
+          { icon: Crown, text: "Crear productos que podrías vender." },
+          { icon: Check, text: "Sentirte orgullosa de algo hecho por tus propias manos." },
+          { icon: Zap, text: "Aprender una habilidad que conservarás para siempre." },
         ].map(({ icon: Icon, text }) => (
           <motion.div key={text} variants={fadeUp} className="card-elegant text-center">
             <Icon className="w-8 h-8 text-gold mx-auto mb-3" />
@@ -278,8 +322,15 @@ const Creadora = () => (
         Conoce a Isabella Tascón
       </motion.h2>
       <div className="flex flex-col md:flex-row items-center gap-8">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex-shrink-0">
-          <img src={creatorImg} alt="Isabella Tascón, creadora del curso" loading="lazy" width={800} height={1422} className="rounded-2xl w-64 h-auto object-contain shadow-lg bg-secondary" />
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex-shrink-0 text-center">
+          <div className="mb-3 font-body">
+            <p className="font-bold text-gold">+5 años creando bolsos con cuentas</p>
+            <p className="text-sm text-muted-foreground">Acompañando mujeres a aprender desde cero</p>
+          </div>
+          <img src={creatorImg} alt="Isabella Tascón, creadora del curso" loading="lazy" width={800} height={1422} className="rounded-2xl w-64 h-auto object-contain shadow-lg bg-secondary mx-auto" />
+          <p className="mt-3 italic text-sm text-muted-foreground font-body max-w-xs mx-auto">
+            "No necesitas talento especial. Solo necesitas una guía clara y comenzar."
+          </p>
         </motion.div>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-muted-foreground font-body leading-relaxed space-y-4">
           <p>Soy Isabella Tascón, tengo 22 años y desde hace 5 años me dedico a crear bolsos con cuentas. Durante este tiempo, esta pasión se ha convertido en una parte muy importante de mi vida, permitiéndome aprender, perfeccionar técnicas y desarrollar diseños llenos de detalle, estilo y dedicación.</p>
@@ -291,10 +342,57 @@ const Creadora = () => (
   </section>
 );
 
+/* ─── TODO LO QUE RECIBES ─── */
+const TodoLoQueRecibes = () => (
+  <section className="section-padding">
+    <div className="container-narrow text-center">
+      <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="section-headline">
+        Todo lo que recibirás hoy
+      </motion.h2>
+      <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-muted-foreground mb-10 font-body text-lg">
+        Acceso inmediato a todo este contenido.
+      </motion.p>
+
+      <motion.ul initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid sm:grid-cols-2 gap-3 max-w-3xl mx-auto text-left font-body">
+        {[
+          "Curso Completo Bolsos con Cuentas",
+          "Más de 23 lecciones paso a paso",
+          "PDF complementario",
+          "Videos de práctica",
+          "Diagramas descargables",
+          "Guía de mantenimiento",
+          "Guía de reparación",
+          "Guía de bolsos con malla plástica",
+          "Guía de fotografía de producto",
+          "Guía de redes sociales",
+          "Guía de empaque profesional",
+          "Grupo privado de Telegram",
+        ].map((t) => (
+          <motion.li key={t} variants={fadeUp} className="card-elegant flex items-start gap-3">
+            <Check className="w-5 h-5 text-verde-dark flex-shrink-0 mt-0.5" /> <span>{t}</span>
+          </motion.li>
+        ))}
+      </motion.ul>
+
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mt-10 relative max-w-3xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <img src={productoImg} alt="Curso principal" className="col-span-2 sm:col-span-2 row-span-2 rounded-2xl shadow-lg w-full aspect-square object-cover" />
+          {[bonoPlantillas, bonoMantenimiento, bonoReparacion, bonoMallaPlastica, bonoFotografia, bonoRedes, bonoEmpaque, bonoTelegram].slice(0,6).map((img, i) => (
+            <img key={i} src={img} alt={`Bono ${i+1}`} className="rounded-xl shadow-md w-full aspect-square object-cover" />
+          ))}
+        </div>
+      </motion.div>
+
+      <div className="mt-10">
+        <CTAButton />
+      </div>
+    </div>
+  </section>
+);
+
 /* ─── 10. OFERTA ─── */
 const Oferta = () => (
   <section id="oferta" className="section-padding bg-gradient-to-br from-rosa/20 via-background to-gold/20 relative overflow-hidden">
-    {/* Decorative elements */}
     <div className="absolute inset-0 pointer-events-none">
       <div className="absolute top-10 left-10 w-32 h-32 bg-gold/10 rounded-full blur-3xl" />
       <div className="absolute bottom-10 right-10 w-40 h-40 bg-rosa/15 rounded-full blur-3xl" />
@@ -313,77 +411,55 @@ const Oferta = () => (
 
       <OfferCountdown />
 
-      <motion.div
-        initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-        className="max-w-md mx-auto relative"
-      >
-        {/* Glowing border effect */}
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="max-w-md mx-auto relative">
         <div className="absolute -inset-1 bg-gradient-to-r from-gold via-rosa-dark to-gold rounded-3xl blur-sm opacity-60 animate-pulse" />
 
         <div className="relative bg-background rounded-3xl p-8 shadow-2xl border border-gold/30">
-          {/* Badge */}
-          <motion.div
-            className="absolute -top-4 left-1/2 -translate-x-1/2"
-            animate={{ y: [0, -4, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-          >
+          <motion.div className="absolute -top-4 left-1/2 -translate-x-1/2" animate={{ y: [0, -4, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
             <span className="bg-rosa-dark text-background text-sm font-bold px-6 py-2 rounded-full font-body uppercase tracking-wider shadow-lg flex items-center gap-1">
-              <Zap className="w-4 h-4" /> 50% OFF <Zap className="w-4 h-4" />
+              <Zap className="w-4 h-4" /> OFERTA <Zap className="w-4 h-4" />
             </span>
           </motion.div>
 
-          <p className="text-sm uppercase tracking-widest text-muted-foreground mb-6 font-body mt-4">Acceso completo al curso + todos los bonos</p>
+          <p className="text-sm uppercase tracking-widest text-muted-foreground mb-6 font-body mt-4">Valor total del contenido</p>
 
-          {/* What's included mini-list */}
-          <div className="flex flex-wrap justify-center gap-2 mb-6">
-            {["+23 módulos", "7 bonos", "Acceso de por vida"].map((t) => (
-              <span key={t} className="bg-verde/20 text-verde-dark text-xs font-semibold px-3 py-1 rounded-full font-body">
-                ✓ {t}
-              </span>
-            ))}
+          <div className="space-y-2 mb-6 text-left font-body max-w-xs mx-auto">
+            <div className="flex justify-between"><span>Curso Completo</span><span className="font-semibold">$79 USD</span></div>
+            <div className="flex justify-between"><span>Bonos Incluidos</span><span className="font-semibold">$118 USD</span></div>
+            <div className="flex justify-between border-t border-border pt-2 text-lg"><span className="font-bold">Valor Total</span><span className="font-bold line-through text-muted-foreground">$197 USD</span></div>
           </div>
 
-          {/* Price */}
-          <div className="mb-2">
-            <span className="text-2xl text-muted-foreground line-through font-body">$59.99 USD</span>
-          </div>
+          <p className="text-sm uppercase tracking-widest text-rosa-dark font-body font-bold mb-1">Hoy:</p>
 
           <motion.div
             initial={{ scale: 0.5, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ type: "spring", stiffness: 200, damping: 10, delay: 0.3 }}
-            className="mb-1"
+            className="mb-2"
           >
             <span className="text-7xl font-bold font-heading bg-gradient-to-r from-gold via-[hsl(43,76%,55%)] to-gold bg-clip-text text-transparent">
-              $29.99
+              $29
             </span>
             <span className="text-2xl font-bold text-gold font-heading ml-1">USD</span>
           </motion.div>
 
-          <motion.p
-            className="text-verde-dark font-bold font-body mb-8 text-lg"
-            animate={{ scale: [1, 1.05, 1] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-          >
-            ¡Ahorras $30.00! 🔥
-          </motion.p>
+          <ul className="text-sm text-muted-foreground font-body mb-6 space-y-1">
+            <li>✓ Pago único</li>
+            <li>✓ Sin mensualidades</li>
+            <li>✓ Sin pagos ocultos</li>
+            <li>✓ Acceso inmediato</li>
+          </ul>
 
-          {/* CTA */}
-          <motion.div
-            animate={{ scale: [1, 1.04, 1] }}
-            transition={{ repeat: Infinity, duration: 2.5 }}
-          >
-            <CTAButton text="👉 QUIERO ACCESO AHORA" microcopy="Pago seguro + acceso inmediato" />
+          <motion.div animate={{ scale: [1, 1.04, 1] }} transition={{ repeat: Infinity, duration: 2.5 }}>
+            <CTAButton text="👉 QUIERO ACCEDER AHORA" microcopy="🔒 Compra protegida por Hotmart" />
           </motion.div>
 
-          {/* Trust signals */}
           <div className="flex items-center justify-center gap-5 mt-6 text-xs text-muted-foreground font-body">
             <span className="flex items-center gap-1"><Shield className="w-4 h-4 text-verde-dark" /> Pago 100% seguro</span>
             <span className="flex items-center gap-1"><Check className="w-4 h-4 text-verde-dark" /> Garantía 7 días</span>
           </div>
 
-          {/* Urgency */}
           <p className="mt-4 text-xs text-rosa-dark font-semibold font-body animate-pulse">
             ⏰ Este precio puede subir en cualquier momento
           </p>
@@ -408,17 +484,40 @@ const Garantia = () => (
   </section>
 );
 
-/* ─── 12. PARA QUIÉN ─── */
+/* ─── 12. PARA QUIÉN ES ─── */
 const ParaQuien = () => (
   <section className="section-padding">
-    <div className="container-narrow text-center">
-      <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="section-headline">
-        ¿Es para ti?
+    <div className="container-narrow">
+      <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="section-headline text-center">
+        Este curso es para ti si...
       </motion.h2>
+      <motion.ul initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="space-y-3 max-w-md mx-auto text-left mb-12">
+        {[
+          "Quieres aprender desde cero.",
+          "Te gustan las manualidades.",
+          "Buscas una actividad creativa.",
+          "Te gustaría crear algo propio.",
+          "Quieres desarrollar una nueva habilidad.",
+          "Te interesa vender tus creaciones en el futuro.",
+          "Quieres aprender a tu ritmo.",
+        ].map((t) => (
+          <motion.li key={t} variants={fadeUp} className="flex items-start gap-3 text-base font-body">
+            <Check className="w-5 h-5 text-verde-dark flex-shrink-0 mt-0.5" /> <span>{t}</span>
+          </motion.li>
+        ))}
+      </motion.ul>
+
+      <motion.h3 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-xl md:text-2xl font-bold text-center font-heading mb-6">
+        Este curso NO es para ti si...
+      </motion.h3>
       <motion.ul initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="space-y-3 max-w-md mx-auto text-left">
-        {["Mujeres que quieren aprender desde cero", "Interesadas en manualidades y artesanías", "Quieren generar ingresos desde casa"].map((t) => (
-          <motion.li key={t} variants={fadeUp} className="flex items-center gap-3 text-lg font-body">
-            <Check className="w-5 h-5 text-verde-dark flex-shrink-0" /> {t}
+        {[
+          "No te gusta practicar.",
+          "Buscas resultados sin aplicar lo aprendido.",
+          "No tienes interés en las manualidades.",
+        ].map((t) => (
+          <motion.li key={t} variants={fadeUp} className="flex items-start gap-3 text-base font-body">
+            <X className="w-5 h-5 text-rosa-dark flex-shrink-0 mt-0.5" /> <span>{t}</span>
           </motion.li>
         ))}
       </motion.ul>
@@ -454,6 +553,24 @@ const FAQ = () => (
   </section>
 );
 
+/* ─── DECISIÓN FINAL ─── */
+const DecisionFinal = () => (
+  <section className="section-padding bg-gradient-to-br from-rosa/10 via-background to-gold/10">
+    <div className="container-narrow text-center">
+      <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="section-headline">
+        Dentro de unos días podrías seguir viendo tutoriales gratuitos sin avanzar...
+      </motion.h2>
+      <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-lg text-muted-foreground mb-4 font-body max-w-2xl mx-auto">
+        O podrías estar terminando tu primer bolso con una guía clara paso a paso.
+      </motion.p>
+      <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-base mb-8 font-body max-w-xl mx-auto">
+        La diferencia entre ambas opciones es la decisión que tomes hoy.
+      </motion.p>
+      <CTAButton text="👉 QUIERO EMPEZAR HOY" />
+    </div>
+  </section>
+);
+
 /* ─── 14. CTA FINAL ─── */
 const CTAFinal = () => (
   <section className="section-padding bg-gold/10">
@@ -475,7 +592,7 @@ const CTAFinal = () => (
 
 /* ─── PAGE ─── */
 const Index = () => (
-  <main className="overflow-hidden">
+  <main className="overflow-hidden pb-20 md:pb-0">
     <CountdownTimer />
     <SocialProofPopup />
     <Hero />
@@ -488,11 +605,14 @@ const Index = () => (
     <Bonos />
     <Beneficios />
     <Creadora />
+    <TodoLoQueRecibes />
     <Oferta />
     <Garantia />
     <ParaQuien />
     <FAQ />
+    <DecisionFinal />
     <CTAFinal />
+    <StickyMobileCTA />
   </main>
 );
 
