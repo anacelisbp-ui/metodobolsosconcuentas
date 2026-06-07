@@ -356,14 +356,6 @@ const TodoLoQueRecibes = () => (
         ))}
       </motion.ul>
 
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mt-10 relative max-w-3xl mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          <img src={productoImg} alt="Curso principal" className="col-span-2 sm:col-span-2 row-span-2 rounded-2xl shadow-lg w-full aspect-square object-cover" />
-          {[bonoPlantillas, bonoMantenimiento, bonoReparacion, bonoMallaPlastica, bonoFotografia, bonoRedes, bonoEmpaque, bonoTelegram].slice(0,6).map((img, i) => (
-            <img key={i} src={img} alt={`Bono ${i+1}`} className="rounded-xl shadow-md w-full aspect-square object-cover" />
-          ))}
-        </div>
-      </motion.div>
 
       <div className="mt-10">
         <CTAButton />
