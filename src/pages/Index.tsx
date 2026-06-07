@@ -179,6 +179,9 @@ const Mecanismo = () => (
       <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="section-headline">
         No necesitas talento… necesitas una guía paso a paso
       </motion.h2>
+      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="my-8">
+        <img src={mecanismoImg} alt="Bolso de cuentas blanco con detalles dorados" loading="lazy" width={800} height={1000} className="rounded-2xl shadow-lg w-full max-w-sm mx-auto" />
+      </motion.div>
       <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-lg text-muted-foreground max-w-xl mx-auto font-body">
         Este curso te lleva desde lo básico hasta diseños listos para vender, sin confusión. Cada módulo está pensado para que avances con confianza.
       </motion.p>
