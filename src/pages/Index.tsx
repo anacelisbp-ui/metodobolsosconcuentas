@@ -573,7 +573,7 @@ const Index = () => (
     <Problema />
     <Deseo />
     <Mecanismo />
-    <Producto />
+    
     <PruebaVisual />
     <SocialProofSection />
     <Bonos />
