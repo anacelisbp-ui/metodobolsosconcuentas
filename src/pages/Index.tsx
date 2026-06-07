@@ -7,7 +7,8 @@ import SocialProofSection from "@/components/SocialProofSection";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 
 import heroAsset from "@/assets/hero-black-bag.jpeg.asset.json";
-import deseoAsset from "@/assets/white-gold-bag.jpeg.asset.json";
+import deseoAsset from "@/assets/deseo-purple-clutch.jpg.asset.json";
+import mecanismoAsset from "@/assets/white-gold-bag.jpeg.asset.json";
 import isabellaBagAsset from "@/assets/isabella-purple-model.png.asset.json";
 import ctaOrangeAsset from "@/assets/cta-orange.jpg.asset.json";
 import galeria1 from "@/assets/galeria-1.webp";
