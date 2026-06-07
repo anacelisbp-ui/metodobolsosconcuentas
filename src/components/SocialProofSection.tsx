@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import CTAButton from "./CTAButton";
 
@@ -45,18 +45,20 @@ const SocialProofSection = () => {
 
         <div className="relative max-w-lg mx-auto">
           <div className="overflow-hidden rounded-2xl shadow-lg">
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={current}
-                src={testimonials[current]}
-                alt={`Testimonio de alumna ${current + 1}`}
-                initial={{ opacity: 0, x: 60 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -60 }}
-                transition={{ duration: 0.4 }}
-                className="w-full object-cover"
-              />
-            </AnimatePresence>
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${current * 100}%)` }}
+            >
+              {testimonials.map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt={`Testimonio de alumna ${i + 1}`}
+                  className="w-full flex-shrink-0 object-cover"
+                  loading="eager"
+                />
+              ))}
+            </div>
           </div>
 
           <button onClick={prev} className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 backdrop-blur-sm rounded-full p-2 shadow-md hover:bg-background transition-colors">
@@ -71,7 +73,7 @@ const SocialProofSection = () => {
               <button
                 key={i}
                 onClick={() => setCurrent(i)}
-                className={`w-2.5 h-2.5 rounded-full transition-all ${i === current ? "bg-gold w-6" : "bg-muted-foreground/30"}`}
+                className={`h-2.5 rounded-full transition-all ${i === current ? "bg-gold w-6" : "bg-muted-foreground/30 w-2.5"}`}
               />
             ))}
           </div>
