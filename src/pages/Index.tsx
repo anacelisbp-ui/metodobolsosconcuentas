@@ -31,6 +31,7 @@ import bonoTelegram from "@/assets/bono-telegram.jpg";
 
 const heroImg = heroAsset.url;
 const deseoImg = deseoAsset.url;
+const mecanismoImg = mecanismoAsset.url;
 const creatorImg = isabellaBagAsset.url;
 const ctaFinalImg = ctaOrangeAsset.url;
 
