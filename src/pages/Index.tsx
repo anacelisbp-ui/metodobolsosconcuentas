@@ -6,9 +6,10 @@ import SocialProofPopup from "@/components/SocialProofPopup";
 import SocialProofSection from "@/components/SocialProofSection";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 
-import heroImg from "@/assets/hero-creator.webp";
-import deseoImg from "@/assets/deseo-creator.webp";
-import productoImg from "@/assets/producto-creator.webp";
+import heroAsset from "@/assets/hero-purple.png.asset.json";
+import deseoAsset from "@/assets/deseo-purple-clutch.jpg.asset.json";
+import isabellaBagAsset from "@/assets/isabella-bag.jpg.asset.json";
+import ctaOrangeAsset from "@/assets/cta-orange.jpg.asset.json";
 import galeria1 from "@/assets/galeria-1.webp";
 import galeria2 from "@/assets/galeria-2.webp";
 import galeria3 from "@/assets/galeria-3.webp";
@@ -26,8 +27,12 @@ import bonoFotografia from "@/assets/bono-fotografia.jpg";
 import bonoRedes from "@/assets/bono-redes.jpg";
 import bonoEmpaque from "@/assets/bono-empaque.jpg";
 import bonoTelegram from "@/assets/bono-telegram.jpg";
-import creatorImg from "@/assets/creator-isabella-clean.webp";
-import ctaFinalImg from "@/assets/cta-final-modelo.webp";
+
+const heroImg = heroAsset.url;
+const deseoImg = deseoAsset.url;
+const creatorImg = isabellaBagAsset.url;
+const ctaFinalImg = ctaOrangeAsset.url;
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
