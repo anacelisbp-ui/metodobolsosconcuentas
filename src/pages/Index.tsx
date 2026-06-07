@@ -184,32 +184,9 @@ const Mecanismo = () => (
   </section>
 );
 
-/* ─── 5. PRODUCTO ─── */
-const Producto = () => (
-  <section className="section-padding bg-secondary">
-    <div className="container-narrow">
-      <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="section-headline text-center">
-        Bolsos de Cuentas: Crea Bolsos de Alta Calidad desde Cero
-      </motion.h2>
+/* ─── 5. PRODUCTO (removed by request) ─── */
 
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="my-10">
-        <img src={productoImg} alt="Creadora mostrando bolso de cuentas turquesa" loading="lazy" width={800} height={1000} className="rounded-2xl shadow-lg mx-auto w-full max-w-md" />
-      </motion.div>
 
-      <motion.ul initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-2 gap-4 max-w-xl mx-auto">
-        {["Técnicas paso a paso", "Diseños completos", "Instalación de cierres, asas y accesorios", "Acabados profesionales", "Mantenimiento y reparación"].map((t) => (
-          <motion.li key={t} variants={fadeUp} className="flex items-center gap-3 font-body">
-            <Sparkles className="w-5 h-5 text-gold flex-shrink-0" /> {t}
-          </motion.li>
-        ))}
-      </motion.ul>
-
-      <div className="mt-10">
-        <CTAButton />
-      </div>
-    </div>
-  </section>
-);
 
 /* ─── 6. PRUEBA VISUAL ─── */
 const galeria = [
