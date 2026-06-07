@@ -413,7 +413,7 @@ const Oferta = () => (
             className="mb-2"
           >
             <span className="text-7xl font-bold font-heading bg-gradient-to-r from-gold via-[hsl(43,76%,55%)] to-gold bg-clip-text text-transparent">
-              $29
+              $19
             </span>
             <span className="text-2xl font-bold text-gold font-heading ml-1">USD</span>
           </motion.div>
