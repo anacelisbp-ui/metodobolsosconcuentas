@@ -6,9 +6,10 @@ import SocialProofPopup from "@/components/SocialProofPopup";
 import SocialProofSection from "@/components/SocialProofSection";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 
-import heroImg from "@/assets/hero-creator.webp";
-import deseoImg from "@/assets/deseo-creator.webp";
-import productoImg from "@/assets/producto-creator.webp";
+import heroAsset from "@/assets/hero-purple.png.asset.json";
+import deseoAsset from "@/assets/deseo-purple-clutch.jpg.asset.json";
+import isabellaBagAsset from "@/assets/isabella-bag.jpg.asset.json";
+import ctaOrangeAsset from "@/assets/cta-orange.jpg.asset.json";
 import galeria1 from "@/assets/galeria-1.webp";
 import galeria2 from "@/assets/galeria-2.webp";
 import galeria3 from "@/assets/galeria-3.webp";
@@ -26,8 +27,12 @@ import bonoFotografia from "@/assets/bono-fotografia.jpg";
 import bonoRedes from "@/assets/bono-redes.jpg";
 import bonoEmpaque from "@/assets/bono-empaque.jpg";
 import bonoTelegram from "@/assets/bono-telegram.jpg";
-import creatorImg from "@/assets/creator-isabella-clean.webp";
-import ctaFinalImg from "@/assets/cta-final-modelo.webp";
+
+const heroImg = heroAsset.url;
+const deseoImg = deseoAsset.url;
+const creatorImg = isabellaBagAsset.url;
+const ctaFinalImg = ctaOrangeAsset.url;
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -179,32 +184,9 @@ const Mecanismo = () => (
   </section>
 );
 
-/* ─── 5. PRODUCTO ─── */
-const Producto = () => (
-  <section className="section-padding bg-secondary">
-    <div className="container-narrow">
-      <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="section-headline text-center">
-        Bolsos de Cuentas: Crea Bolsos de Alta Calidad desde Cero
-      </motion.h2>
+/* ─── 5. PRODUCTO (removed by request) ─── */
 
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="my-10">
-        <img src={productoImg} alt="Creadora mostrando bolso de cuentas turquesa" loading="lazy" width={800} height={1000} className="rounded-2xl shadow-lg mx-auto w-full max-w-md" />
-      </motion.div>
 
-      <motion.ul initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="grid md:grid-cols-2 gap-4 max-w-xl mx-auto">
-        {["Técnicas paso a paso", "Diseños completos", "Instalación de cierres, asas y accesorios", "Acabados profesionales", "Mantenimiento y reparación"].map((t) => (
-          <motion.li key={t} variants={fadeUp} className="flex items-center gap-3 font-body">
-            <Sparkles className="w-5 h-5 text-gold flex-shrink-0" /> {t}
-          </motion.li>
-        ))}
-      </motion.ul>
-
-      <div className="mt-10">
-        <CTAButton />
-      </div>
-    </div>
-  </section>
-);
 
 /* ─── 6. PRUEBA VISUAL ─── */
 const galeria = [
@@ -374,14 +356,6 @@ const TodoLoQueRecibes = () => (
         ))}
       </motion.ul>
 
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mt-10 relative max-w-3xl mx-auto">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          <img src={productoImg} alt="Curso principal" className="col-span-2 sm:col-span-2 row-span-2 rounded-2xl shadow-lg w-full aspect-square object-cover" />
-          {[bonoPlantillas, bonoMantenimiento, bonoReparacion, bonoMallaPlastica, bonoFotografia, bonoRedes, bonoEmpaque, bonoTelegram].slice(0,6).map((img, i) => (
-            <img key={i} src={img} alt={`Bono ${i+1}`} className="rounded-xl shadow-md w-full aspect-square object-cover" />
-          ))}
-        </div>
-      </motion.div>
 
       <div className="mt-10">
         <CTAButton />
@@ -439,7 +413,7 @@ const Oferta = () => (
             className="mb-2"
           >
             <span className="text-7xl font-bold font-heading bg-gradient-to-r from-gold via-[hsl(43,76%,55%)] to-gold bg-clip-text text-transparent">
-              $29
+              $19
             </span>
             <span className="text-2xl font-bold text-gold font-heading ml-1">USD</span>
           </motion.div>
@@ -599,7 +573,7 @@ const Index = () => (
     <Problema />
     <Deseo />
     <Mecanismo />
-    <Producto />
+    
     <PruebaVisual />
     <SocialProofSection />
     <Bonos />
