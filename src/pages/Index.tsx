@@ -11,15 +11,14 @@ import deseoAsset from "@/assets/deseo-purple-clutch.jpg.asset.json";
 import mecanismoAsset from "@/assets/white-gold-bag.jpeg.asset.json";
 import isabellaBagAsset from "@/assets/isabella-purple-model.png.asset.json";
 import ctaOrangeAsset from "@/assets/cta-orange.jpg.asset.json";
-import galeria1 from "@/assets/galeria-1.webp";
-import galeria2 from "@/assets/galeria-2.webp";
-import galeria3 from "@/assets/galeria-3.webp";
-import galeria4 from "@/assets/galeria-4.webp";
-import galeria5 from "@/assets/galeria-5.webp";
-import galeria6 from "@/assets/galeria-6.webp";
-import galeriaNew1 from "@/assets/galeria-new-1.webp";
-import galeriaNew2 from "@/assets/galeria-new-2.png";
-import galeriaNew3 from "@/assets/galeria-new-3.webp";
+import creaRojoAsset from "@/assets/crea-rojo.png.asset.json";
+import creaRosadoAsset from "@/assets/crea-rosado.jpg.asset.json";
+import creaTransparenteAsset from "@/assets/crea-transparente.png.asset.json";
+import creaRedondoAsset from "@/assets/crea-redondo.jpg.asset.json";
+import creaRojoLilaAsset from "@/assets/crea-rojo-lila.png.asset.json";
+import creaTurquesaAsset from "@/assets/crea-turquesa.png.asset.json";
+import creaLilaAsset from "@/assets/crea-lila.png.asset.json";
+import creaBlancoNegroAsset from "@/assets/crea-blanco-negro.png.asset.json";
 import bonoPlantillas from "@/assets/bono-plantillas.jpg";
 import bonoMantenimiento from "@/assets/bono-mantenimiento.jpg";
 import bonoReparacion from "@/assets/bono-reparacion.jpg";
@@ -195,15 +194,14 @@ const Mecanismo = () => (
 
 /* ─── 6. PRUEBA VISUAL ─── */
 const galeria = [
-  { img: galeria1, copy: "Bolso elegante en tonos púrpura con acabados dorados, perfecto para un look sofisticado." },
-  { img: galeria2, copy: "Diseño turquesa con detalles en cristal, moderno y versátil para cualquier ocasión." },
-  { img: galeria3, copy: "Bolso transparente de cuentas cristalinas, un diseño delicado que parece de boutique." },
-  { img: galeriaNew1, copy: "Bolso de cristal con detalles turquesa y cadena dorada, elegancia artesanal en cada detalle." },
-  { img: galeriaNew2, copy: "Diseño tipo red con cuentas negras y rosa, un bolso único que combina estilo y creatividad." },
-  { img: galeriaNew3, copy: "Clutch rojo vibrante con cierre dorado, una pieza llamativa perfecta para ocasiones especiales." },
-  { img: galeria4, copy: "Bolso multicolor vibrante con patrón de flores, una pieza única que enamora a primera vista." },
-  { img: galeria5, copy: "Elegante combinación de negro y cristal, perfecto para eventos y ocasiones especiales." },
-  { img: galeria6, copy: "Bolso negro con asa de cristal y correa, sofisticado y listo para vender desde el primer día." },
+  { img: creaRojoAsset.url, copy: "Clutch rojo brillante con cadena metálica y acabado elegante, ideal para ocasiones especiales." },
+  { img: creaRosadoAsset.url, copy: "Diseño rosado delicado con silueta redonda, perfecto para crear piezas femeninas y modernas." },
+  { img: creaTransparenteAsset.url, copy: "Bolso transparente de cuentas cristalinas con estructura firme y acabado limpio." },
+  { img: creaRedondoAsset.url, copy: "Bolso redondo en tonos oscuros con cadena dorada, un diseño sofisticado y llamativo." },
+  { img: creaRojoLilaAsset.url, copy: "Diseño rojo con detalle lila que demuestra cómo combinar colores para crear bolsos únicos." },
+  { img: creaTurquesaAsset.url, copy: "Modelo turquesa con detalle decorativo y accesorio a juego, moderno y creativo." },
+  { img: creaLilaAsset.url, copy: "Bolso lila con herrajes dorados, elegante y con acabado visual de alta calidad." },
+  { img: creaBlancoNegroAsset.url, copy: "Diseño bicolor en negro y cristal, perfecto para looks versátiles y con estilo." },
 ];
 
 const PruebaVisual = () => (
