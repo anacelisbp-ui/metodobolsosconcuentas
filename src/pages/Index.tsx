@@ -11,14 +11,16 @@ import deseoImg from "@/assets/deseo-creator.webp";
 import mecanismoImg from "@/assets/bolso-closeup.jpg";
 import creatorImg from "@/assets/creator-isabella-clean.webp";
 import ctaFinalImg from "@/assets/cta-final-modelo.webp";
-import galeria1Img from "@/assets/galeria-new-1.webp";
-import galeria2Img from "@/assets/galeria-new-2.png";
-import galeria3Img from "@/assets/galeria-new-3.webp";
-import galeria4Img from "@/assets/galeria-1.webp";
-import galeria5Img from "@/assets/galeria-2.webp";
-import galeria6Img from "@/assets/galeria-3.webp";
-import galeria7Img from "@/assets/galeria-4.webp";
-import galeria8Img from "@/assets/galeria-5.webp";
+import creaCorazon from "@/assets/crea-corazon.webp";
+import creaRedondo from "@/assets/crea-redondo.webp";
+import creaRosado from "@/assets/crea-rosado.webp";
+import creaRojoLila from "@/assets/crea-rojo-lila.webp";
+import creaTurquesa from "@/assets/crea-turquesa.webp";
+import creaTransparente from "@/assets/crea-transparente.webp";
+import creaLila from "@/assets/crea-lila.webp";
+import creaBlanco from "@/assets/crea-blanco.webp";
+import creaNegroRosa from "@/assets/crea-negro-rosa.webp";
+import creaClutchRojo from "@/assets/crea-clutch-rojo.webp";
 import bonoPlantillas from "@/assets/bono-plantillas.jpg";
 import bonoMantenimiento from "@/assets/bono-mantenimiento.jpg";
 import bonoReparacion from "@/assets/bono-reparacion.jpg";
@@ -187,14 +189,16 @@ const Mecanismo = () => (
 
 /* ─── 6. PRUEBA VISUAL ─── */
 const galeria = [
-  { img: galeria1Img, copy: "Clutch rojo brillante con cadena metálica y acabado elegante, ideal para ocasiones especiales." },
-  { img: galeria2Img, copy: "Diseño rosado delicado con silueta redonda, perfecto para crear piezas femeninas y modernas." },
-  { img: galeria3Img, copy: "Bolso transparente de cuentas cristalinas con estructura firme y acabado limpio." },
-  { img: galeria4Img, copy: "Bolso redondo en tonos oscuros con cadena dorada, un diseño sofisticado y llamativo." },
-  { img: galeria5Img, copy: "Diseño rojo con detalle lila que demuestra cómo combinar colores para crear bolsos únicos." },
-  { img: galeria6Img, copy: "Modelo turquesa con detalle decorativo y accesorio a juego, moderno y creativo." },
-  { img: galeria7Img, copy: "Bolso lila con herrajes dorados, elegante y con acabado visual de alta calidad." },
-  { img: galeria8Img, copy: "Diseño bicolor en negro y cristal, perfecto para looks versátiles y con estilo." },
+  { img: creaCorazon, copy: "Bolso corazón en verde menta con perlas, diseño romántico y delicado." },
+  { img: creaRedondo, copy: "Bolso redondo en tonos chocolate con cadena dorada, sofisticado y llamativo." },
+  { img: creaRosado, copy: "Bolso rosado en cristal facetado, femenino y brillante para ocasiones especiales." },
+  { img: creaRojoLila, copy: "Diseño rojo con detalle lila que demuestra cómo combinar colores únicos." },
+  { img: creaTurquesa, copy: "Bolso turquesa con detalle decorativo y accesorio a juego, moderno y creativo." },
+  { img: creaTransparente, copy: "Bolso transparente de cuentas cristalinas con estructura firme y acabado limpio." },
+  { img: creaLila, copy: "Bolso lila con herrajes dorados, elegante y con acabado visual de alta calidad." },
+  { img: creaBlanco, copy: "Bolso blanco cristal con silueta clásica, perfecto para un look refinado." },
+  { img: creaNegroRosa, copy: "Diseño bicolor negro y rosa con interior crema, versátil y con estilo." },
+  { img: creaClutchRojo, copy: "Clutch rojo brillante con cadena metálica y acabado elegante, ideal para ocasiones especiales." },
 ];
 
 const PruebaVisual = () => (
