@@ -189,14 +189,16 @@ const Mecanismo = () => (
 
 /* ─── 6. PRUEBA VISUAL ─── */
 const galeria = [
-  { img: galeria1Img, copy: "Clutch rojo brillante con cadena metálica y acabado elegante, ideal para ocasiones especiales." },
-  { img: galeria2Img, copy: "Diseño rosado delicado con silueta redonda, perfecto para crear piezas femeninas y modernas." },
-  { img: galeria3Img, copy: "Bolso transparente de cuentas cristalinas con estructura firme y acabado limpio." },
-  { img: galeria4Img, copy: "Bolso redondo en tonos oscuros con cadena dorada, un diseño sofisticado y llamativo." },
-  { img: galeria5Img, copy: "Diseño rojo con detalle lila que demuestra cómo combinar colores para crear bolsos únicos." },
-  { img: galeria6Img, copy: "Modelo turquesa con detalle decorativo y accesorio a juego, moderno y creativo." },
-  { img: galeria7Img, copy: "Bolso lila con herrajes dorados, elegante y con acabado visual de alta calidad." },
-  { img: galeria8Img, copy: "Diseño bicolor en negro y cristal, perfecto para looks versátiles y con estilo." },
+  { img: creaCorazon, copy: "Bolso corazón en verde menta con perlas, diseño romántico y delicado." },
+  { img: creaRedondo, copy: "Bolso redondo en tonos chocolate con cadena dorada, sofisticado y llamativo." },
+  { img: creaRosado, copy: "Bolso rosado en cristal facetado, femenino y brillante para ocasiones especiales." },
+  { img: creaRojoLila, copy: "Diseño rojo con detalle lila que demuestra cómo combinar colores únicos." },
+  { img: creaTurquesa, copy: "Bolso turquesa con detalle decorativo y accesorio a juego, moderno y creativo." },
+  { img: creaTransparente, copy: "Bolso transparente de cuentas cristalinas con estructura firme y acabado limpio." },
+  { img: creaLila, copy: "Bolso lila con herrajes dorados, elegante y con acabado visual de alta calidad." },
+  { img: creaBlanco, copy: "Bolso blanco cristal con silueta clásica, perfecto para un look refinado." },
+  { img: creaNegroRosa, copy: "Diseño bicolor negro y rosa con interior crema, versátil y con estilo." },
+  { img: creaClutchRojo, copy: "Clutch rojo brillante con cadena metálica y acabado elegante, ideal para ocasiones especiales." },
 ];
 
 const PruebaVisual = () => (
