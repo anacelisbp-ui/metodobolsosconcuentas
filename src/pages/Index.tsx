@@ -6,19 +6,19 @@ import SocialProofPopup from "@/components/SocialProofPopup";
 import SocialProofSection from "@/components/SocialProofSection";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 
-import heroAsset from "@/assets/hero-black-bag.jpeg.asset.json";
-import deseoAsset from "@/assets/deseo-purple-clutch.jpg.asset.json";
-import mecanismoAsset from "@/assets/white-gold-bag.jpeg.asset.json";
-import isabellaBagAsset from "@/assets/isabella-purple-model.png.asset.json";
-import ctaOrangeAsset from "@/assets/cta-orange.jpg.asset.json";
-import creaRojoAsset from "@/assets/crea-rojo.png.asset.json";
-import creaRosadoAsset from "@/assets/crea-rosado.jpg.asset.json";
-import creaTransparenteAsset from "@/assets/crea-transparente.png.asset.json";
-import creaRedondoAsset from "@/assets/crea-redondo.jpg.asset.json";
-import creaRojoLilaAsset from "@/assets/crea-rojo-lila.png.asset.json";
-import creaTurquesaAsset from "@/assets/crea-turquesa.png.asset.json";
-import creaLilaAsset from "@/assets/crea-lila.png.asset.json";
-import creaBlancoNegroAsset from "@/assets/crea-blanco-negro.png.asset.json";
+import heroImg from "@/assets/hero-creator.webp";
+import deseoImg from "@/assets/deseo-creator.webp";
+import mecanismoImg from "@/assets/bolso-closeup.jpg";
+import creatorImg from "@/assets/creator-isabella-clean.webp";
+import ctaFinalImg from "@/assets/cta-final-modelo.webp";
+import galeria1Img from "@/assets/galeria-new-1.webp";
+import galeria2Img from "@/assets/galeria-new-2.png";
+import galeria3Img from "@/assets/galeria-new-3.webp";
+import galeria4Img from "@/assets/galeria-1.webp";
+import galeria5Img from "@/assets/galeria-2.webp";
+import galeria6Img from "@/assets/galeria-3.webp";
+import galeria7Img from "@/assets/galeria-4.webp";
+import galeria8Img from "@/assets/galeria-5.webp";
 import bonoPlantillas from "@/assets/bono-plantillas.jpg";
 import bonoMantenimiento from "@/assets/bono-mantenimiento.jpg";
 import bonoReparacion from "@/assets/bono-reparacion.jpg";
@@ -27,13 +27,6 @@ import bonoFotografia from "@/assets/bono-fotografia.jpg";
 import bonoRedes from "@/assets/bono-redes.jpg";
 import bonoEmpaque from "@/assets/bono-empaque.jpg";
 import bonoTelegram from "@/assets/bono-telegram.jpg";
-
-const heroImg = heroAsset.url;
-const deseoImg = deseoAsset.url;
-const mecanismoImg = mecanismoAsset.url;
-const creatorImg = isabellaBagAsset.url;
-const ctaFinalImg = ctaOrangeAsset.url;
-
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -194,14 +187,14 @@ const Mecanismo = () => (
 
 /* ─── 6. PRUEBA VISUAL ─── */
 const galeria = [
-  { img: creaRojoAsset.url, copy: "Clutch rojo brillante con cadena metálica y acabado elegante, ideal para ocasiones especiales." },
-  { img: creaRosadoAsset.url, copy: "Diseño rosado delicado con silueta redonda, perfecto para crear piezas femeninas y modernas." },
-  { img: creaTransparenteAsset.url, copy: "Bolso transparente de cuentas cristalinas con estructura firme y acabado limpio." },
-  { img: creaRedondoAsset.url, copy: "Bolso redondo en tonos oscuros con cadena dorada, un diseño sofisticado y llamativo." },
-  { img: creaRojoLilaAsset.url, copy: "Diseño rojo con detalle lila que demuestra cómo combinar colores para crear bolsos únicos." },
-  { img: creaTurquesaAsset.url, copy: "Modelo turquesa con detalle decorativo y accesorio a juego, moderno y creativo." },
-  { img: creaLilaAsset.url, copy: "Bolso lila con herrajes dorados, elegante y con acabado visual de alta calidad." },
-  { img: creaBlancoNegroAsset.url, copy: "Diseño bicolor en negro y cristal, perfecto para looks versátiles y con estilo." },
+  { img: galeria1Img, copy: "Clutch rojo brillante con cadena metálica y acabado elegante, ideal para ocasiones especiales." },
+  { img: galeria2Img, copy: "Diseño rosado delicado con silueta redonda, perfecto para crear piezas femeninas y modernas." },
+  { img: galeria3Img, copy: "Bolso transparente de cuentas cristalinas con estructura firme y acabado limpio." },
+  { img: galeria4Img, copy: "Bolso redondo en tonos oscuros con cadena dorada, un diseño sofisticado y llamativo." },
+  { img: galeria5Img, copy: "Diseño rojo con detalle lila que demuestra cómo combinar colores para crear bolsos únicos." },
+  { img: galeria6Img, copy: "Modelo turquesa con detalle decorativo y accesorio a juego, moderno y creativo." },
+  { img: galeria7Img, copy: "Bolso lila con herrajes dorados, elegante y con acabado visual de alta calidad." },
+  { img: galeria8Img, copy: "Diseño bicolor en negro y cristal, perfecto para looks versátiles y con estilo." },
 ];
 
 const PruebaVisual = () => (
