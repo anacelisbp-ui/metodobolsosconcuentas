@@ -6,10 +6,10 @@ import SocialProofPopup from "@/components/SocialProofPopup";
 import SocialProofSection from "@/components/SocialProofSection";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 
-import heroImg from "@/assets/hero-creator.webp";
-import deseoImg from "@/assets/deseo-creator.webp";
-import mecanismoImg from "@/assets/bolso-closeup.jpg";
-import creatorImg from "@/assets/creator-isabella-clean.webp";
+import heroImg from "@/assets/hero-pearl-bag.jpeg";
+import deseoImg from "@/assets/deseo-purple-clutch.jpeg";
+import mecanismoImg from "@/assets/mecanismo-orange-bag.jpeg";
+import creatorImg from "@/assets/isabella-purple-model.png";
 import ctaFinalImg from "@/assets/cta-final-modelo.webp";
 import creaCorazon from "@/assets/crea-corazon.webp";
 import creaRedondo from "@/assets/crea-redondo.webp";
