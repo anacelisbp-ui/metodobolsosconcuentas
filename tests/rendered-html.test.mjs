@@ -20,6 +20,8 @@ test("server-renders the sales landing with the verified offer", async () => {
   assert.match(html, /23\+/);
   assert.match(html, /Garantía de 7 días/);
   assert.match(html, /https:\/\/go\.hotmart\.com\/G105098149D\?ap=9ede/);
+  assert.match(html, /data-manychat-source-forwarder="true"/);
+  assert.match(html, /searchParams\.set\("src", sourceId\)/);
   assert.doesNotMatch(html, /codex-preview|Oferta especial termina|acaba de comprar/i);
 });
 
@@ -49,9 +51,11 @@ test("emits a self-contained Netlify static site", async () => {
   assert.match(html, /<html lang="es">/i);
   assert.match(html, /USD 29\.99/);
   assert.match(html, /G105098149D\?ap=9ede/);
+  assert.match(html, /data-manychat-source-forwarder="true"/);
+  assert.match(html, /searchParams\.set\("src", sourceId\)/);
   assert.match(html, /\/assets\/hero-pearl-bag-DZVQ83lF\.jpeg/);
   assert.doesNotMatch(html, /\/_next\/image\?/);
-  assert.doesNotMatch(html, /<script\b/i);
+  assert.doesNotMatch(html, /<script\b(?![^>]*data-manychat-source-forwarder)/i);
   assert.equal(redirects, "/* /index.html 200\n");
   assert.match(config, /publish = "netlify-dist"/);
 });

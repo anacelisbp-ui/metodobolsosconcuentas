@@ -41,8 +41,8 @@ html = html.replace(
 html = html.replace(/\s+srcSet="[^"]*"/g, "");
 
 // The landing has no client-side React state. Remove RSC bootstrap scripts and
-// JavaScript preloads so the static page makes no unnecessary runtime requests.
-html = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "");
+// JavaScript preloads, while preserving the small ManyChat source forwarder.
+html = html.replace(/<script\b(?![^>]*data-manychat-source-forwarder)[^>]*>[\s\S]*?<\/script>/gi, "");
 html = html.replace(/<link\b(?=[^>]*rel="modulepreload")[^>]*\/?>(?:\n)?/gi, "");
 
 if (html.includes("/_next/image?")) {

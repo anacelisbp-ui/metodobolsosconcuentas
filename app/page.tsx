@@ -35,6 +35,22 @@ function CTA({ label = "Quiero crear mi primer bolso", dark = false }: { label?:
 export default function Home() {
   return (
     <main>
+      <script
+        data-manychat-source-forwarder="true"
+        dangerouslySetInnerHTML={{
+          __html: `(() => {
+            const sourceId = new URLSearchParams(window.location.search).get("src");
+
+            if (!sourceId || !/^\\d{1,30}$/.test(sourceId)) return;
+
+            document.querySelectorAll('a[href^="https://go.hotmart.com/"]').forEach((link) => {
+              const checkoutUrl = new URL(link.href);
+              checkoutUrl.searchParams.set("src", sourceId);
+              link.href = checkoutUrl.toString();
+            });
+          })();`,
+        }}
+      />
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="Método Bolsos con Cuentas, inicio"><span className="brand-mark" aria-hidden="true">✦</span><span>Método <strong>Bolsos con Cuentas</strong></span></a>
         <nav aria-label="Navegación principal"><a href="#metodo">El método</a><a href="#programa">Qué incluye</a><a href="#preguntas">Preguntas</a></nav>
