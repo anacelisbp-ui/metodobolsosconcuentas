@@ -35,22 +35,6 @@ function CTA({ label = "Quiero crear mi primer bolso", dark = false }: { label?:
 export default function Home() {
   return (
     <main>
-      <script
-        data-manychat-source-forwarder="true"
-        dangerouslySetInnerHTML={{
-          __html: `(() => {
-            const sourceId = new URLSearchParams(window.location.search).get("src");
-
-            if (!sourceId || !/^\\d{1,30}$/.test(sourceId)) return;
-
-            document.querySelectorAll('a[href^="https://go.hotmart.com/"]').forEach((link) => {
-              const checkoutUrl = new URL(link.href);
-              checkoutUrl.searchParams.set("src", sourceId);
-              link.href = checkoutUrl.toString();
-            });
-          })();`,
-        }}
-      />
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="Método Bolsos con Cuentas, inicio"><span className="brand-mark" aria-hidden="true">✦</span><span>Método <strong>Bolsos con Cuentas</strong></span></a>
         <nav aria-label="Navegación principal"><a href="#metodo">El método</a><a href="#programa">Qué incluye</a><a href="#preguntas">Preguntas</a></nav>
@@ -136,6 +120,22 @@ export default function Home() {
 
       <footer><div className="footer-brand"><span className="brand-mark">✦</span><p>Método<br /><strong>Bolsos con Cuentas</strong></p></div><p>Formación digital para aprender una técnica artesanal paso a paso.</p><div className="footer-links"><a href="#privacidad">Privacidad</a><a href="#terminos">Términos</a><a href="#preguntas">Preguntas frecuentes</a></div><div className="legal-copy" id="privacidad">Tus datos de compra son procesados por Hotmart conforme a sus políticas.</div><div className="legal-copy" id="terminos">Producto digital sujeto a las condiciones informadas en la página de pago y a la garantía indicada.</div><small>© {new Date().getFullYear()} Método Bolsos con Cuentas.</small></footer>
       <div className="mobile-buy"><a href={CHECKOUT} target="_blank" rel="noreferrer"><span>Acceso por <strong>USD 29.99</strong></span><b>Quiero empezar ↗</b></a></div>
+      <script
+        data-manychat-source-forwarder="true"
+        dangerouslySetInnerHTML={{
+          __html: `(() => {
+            const sourceId = new URLSearchParams(window.location.search).get("src");
+
+            if (!sourceId || !/^\\d{1,30}$/.test(sourceId)) return;
+
+            document.querySelectorAll('a[href^="https://go.hotmart.com/"]').forEach((link) => {
+              const checkoutUrl = new URL(link.href);
+              checkoutUrl.searchParams.set("src", sourceId);
+              link.href = checkoutUrl.toString();
+            });
+          })();`,
+        }}
+      />
     </main>
   );
 }

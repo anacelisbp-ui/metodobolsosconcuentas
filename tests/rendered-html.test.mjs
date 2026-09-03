@@ -53,6 +53,10 @@ test("emits a self-contained Netlify static site", async () => {
   assert.match(html, /G105098149D\?ap=9ede/);
   assert.match(html, /data-manychat-source-forwarder="true"/);
   assert.match(html, /searchParams\.set\("src", sourceId\)/);
+  assert.ok(
+    html.indexOf("G105098149D?ap=9ede") < html.indexOf('data-manychat-source-forwarder="true"'),
+    "the source forwarder must run after checkout links exist",
+  );
   assert.match(html, /\/assets\/hero-pearl-bag-DZVQ83lF\.jpeg/);
   assert.doesNotMatch(html, /\/_next\/image\?/);
   assert.doesNotMatch(html, /<script\b(?![^>]*data-manychat-source-forwarder)/i);
